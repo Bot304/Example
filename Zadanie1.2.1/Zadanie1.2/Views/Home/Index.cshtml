@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Список";
+}
+<h3>Сотрудники</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Отчество</td>
+        <td>Дата рождения</td>
+        <td>Организация</td>
+        <td>Номер телефона</td>
+        <td>Почта</td>
+    </tr>
+    @foreach (var shape in Model)
+    {
+        <tr>
+            <td>@shape.Name</td>
+            <td>@shape.Surname</td>
+            <td>@shape.Patronymic</td>
+            <td>@shape.DateBirth</td>
+            <td>@shape.Company</td>
+            <td>@shape.Number</td>
+            <td>@shape.Email</td>
+        </tr>
+    }
+</table>
+
+<p><a href="~/Home/Insert/">добавить сотрудника</a></p>
+
+
